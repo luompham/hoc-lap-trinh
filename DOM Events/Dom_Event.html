@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Events</title>
+    <style>
+        ul {
+            display: none;
+        }
+
+        .inputShow:focus~ul {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. Attribute events -->
+    <!-- <h1 onclick="console.log(this)">
+        <span onclick="console.log(this)">DOM Events</span>
+    </h1> -->
+
+    <!-- 2. Assign events using the element node -->
+    <h1 id="h1Id">DOM Events 1</h1>
+    <h1 id="h1Id">DOM Events 2</h1>
+    <h1 id="h1Id">DOM Events 3</h1>
+
+    <input type="text">
+    <input type="checkbox">
+    <select name="" id="">
+        <option value="value1">1</option>
+        <option value="value2">2</option>
+        <option value="value3">3</option>
+    </select>
+    <br />
+    <br />
+    <br />
+    <!-- Prevent default of browser - case 1 -->
+    <a href="https://f8.edu.vn">Học lập trình</a>
+    <br />
+    <a href="https://google.com.vn">Tìm kiếm</a>
+    <br />
+    <br />
+    <br />
+
+
+    <!-- Prevent default of browser - case 2 -->
+    <input class="inputShow" type="text" placeholder="Tìm kiếm">
+    <br />
+    <ul>
+        <li>Javascript</li>
+        <li>PHP</li>
+        <li>Python</li>
+    </ul>
+
+    <br />
+    <br />
+
+    <!-- Stop propagation event -->
+    <div>
+        DIV
+        <button>Click me</button>
+    </div>
+
+
+    <script src="./DOMEvents.js"></script>
+    <script src="./preventDefault.js"></script>
+    <script src="./stopPropagation.js"></script>
+</body>
+
+</html>

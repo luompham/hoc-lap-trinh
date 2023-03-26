@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Laptop",
+      "price": 2000,
+      "color": "blue"
+    },
+    {
+      "id": 2,
+      "name": "Laptop 2",
+      "price": 3000,
+      "color": "white"
+    },
+    {
+      "id": 3,
+      "name": "Iphone 13",
+      "price": 53000,
+      "color": "red"
+    },
+    {
+      "id": 4,
+      "name": "TV",
+      "price": 500,
+      "color": "purple"
+    },
+    {
+      "id": 5,
+      "name": "Watch",
+      "price": 400,
+      "color": "pink"
+    }
+  ]
+}
