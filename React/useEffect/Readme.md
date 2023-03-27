@@ -19,7 +19,7 @@ Callbalk sẽ được gọi lại mỗi khi dependencies thay đổi.
 # Cleanup function
 
 - Luôn được gọi trước khi component unmounted.
-- Luôn được gọi trước khi callback được gọi trừ lần đầu component được mounted
+- Luôn được gọi trước khi callback được gọi (trừ lần đầu component được mounted).
 Đây là hàm được return trong callback của useEffect. Dùng để dọn dẹp những dữ liệu ko dùng nữa trong bộ nhớ khi ta unmounted component, tránh gây rò rỉ bộ nhớ.
  
  ```js
