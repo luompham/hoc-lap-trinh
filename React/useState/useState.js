@@ -27,7 +27,7 @@ function ChangeInfo() {
 }
 
 const App = () => {
-
+    console.log('strict mode')
     const [count, setCount] = useState(() => {
         const total = orders.reduce((total, curr) => {
             return total + curr
@@ -57,4 +57,8 @@ const App = () => {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(
+    <React.StrictMode>
+        <App />
+    </React.StrictMode>
+);
