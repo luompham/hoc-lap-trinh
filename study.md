@@ -17,8 +17,28 @@
     Call component and figure out what 
 #### Step 3: Commiting to the DOM
 
-## State
-## Hook
+## 6. State
+    Quản lý trạng thái của component.
+## 7. Hook
+### memo() method
+    Giúp xử lý component để tránh bị re-render khi không cần thiết. memo() method lắng nghe props (chỉ là kiểu dữ liệu tham trị) của Component, không có hiệu quả khi props là kiểu dữ liệu tham chiếu.
+### useCallback() hook
+    Giải quyết vấn đề của memo() method. Dùng cho những event handlers tránh render lại component ko cần thiết (dùng kết hợp với memo() method).
+### useRef() hook
+    - Dùng để lưu giá trị qua 1 tham chiếu bên ngoài
+    - Các hàm khác có thể nhận được giá trị của 1 biến trong phạm vi 1 hàm khác thông qua `useRef`.
+    - Có thể ứng dụng lấy DOM element node.
+### useEffect() hook
+### useLayoutEffect() hook
+### useMemo() hook
+### useRef() hook
+### useRef() hook
+
+
+
+
+
+
 # Redux (manage state)
 # MongoDB (database)
 # Express (backend)

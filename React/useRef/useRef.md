@@ -7,6 +7,7 @@ const ref = useRef(initialValue);
 ## Mục đích: 
 - Dùng để lưu giá trị qua 1 tham chiếu bên ngoài
 - Các hàm khác có thể nhận được giá trị của 1 biến trong phạm vi 1 hàm khác thông qua `useRef`.
+- Có thể ứng dụng lấy DOM element node.
 - Hàm `useRef` nhận 1 tham số là giá trị khởi tạo `initialValue`, tham số này có thể là bất kỳ kiểu dữ liệu trong JS.
 - Hàm `useRef` trả về 1 `object` có key là `current`
 

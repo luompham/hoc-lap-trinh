@@ -2,7 +2,7 @@
 1. Cách dùng:
 - Có thể dùng với funcion component và class component
 - Đây là function bậc cao nên khi dùng sẽ wrap (bao bọc) lấy `React component`.
-- Giúp xử lý component để tránh bị render khi không cần thiết
+- Giúp xử lý component để tránh bị re-render khi không cần thiết
     + Hàm này sẽ ghi nhớ các `props` của component và kiểm tra xem props trước và sau khi render có thay đổi không.
     + Nếu props không thay đổi thì ko render và ngược lại
 

@@ -1,13 +1,13 @@
 const { useState, memo, useCallback } = React
 
 const ChildComponent = memo(
-    ({ handleIncrease }) => {
+    ({ onIncrease }) => {
         return (
             <>
                 <h1>This is a Child Component</h1>
                 {console.log('re-render')}
 
-                <button onClick={handleIncrease}>Click me</button>
+                <button onClick={onIncrease}>Click me</button>
 
             </>
         )
@@ -17,13 +17,13 @@ const ChildComponent = memo(
 const App = () => {
     const [count, setCount] = useState(0)
     const handleIncrease = useCallback(() => {
-        return setCount(count + 1)
-    }, [count])
+        return setCount(prev => prev + 1)
+    }, [])
     return (
         <>
             <h2>{count}</h2>
 
-            <ChildComponent handleIncrease={handleIncrease} />
+            <ChildComponent onIncrease={handleIncrease} />
         </>
     )
 }
