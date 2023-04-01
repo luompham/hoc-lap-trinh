@@ -18,7 +18,7 @@
 #### Step 3: Commiting to the DOM
 
 ## 6. State
-    Quản lý trạng thái của component.
+    Quản lý trạng thái của component. Là bộ nhớ của component, dùng để lưu giữ thông tin của component và gửi thông tin đó cho web server.
 ## 7. Hook
 ### memo() method
     Giúp xử lý component để tránh bị re-render khi không cần thiết. memo() method lắng nghe props (chỉ là kiểu dữ liệu tham trị) của Component, không có hiệu quả khi props là kiểu dữ liệu tham chiếu.
