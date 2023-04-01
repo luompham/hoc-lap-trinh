@@ -1,4 +1,4 @@
-const { useReducer } = React
+const { useReducer, useRef } = React
 const initState = {
     job: '',
     jobs: [],
@@ -48,9 +48,10 @@ const reducer = (state, action) => {
             }
             break
         case DELETE_JOB:
+
             newState = {
                 ...state,
-                jobs: state.jobs.filter(job => job !== action.payload)
+                jobs: state.jobs.filter((item, index) => index !== action.payload)
             }
             break
         default:
@@ -69,26 +70,33 @@ const reducer = (state, action) => {
 const App = () => {
     const [state, dispatch] = useReducer(reducer, initState);
     const { job, jobs } = state
+    const inputRef = useRef();
+
+    console.log(inputRef)
     const handleSubmit = () => {
-        //   console.log('add', job);
         dispatch(addJob(job))
+        dispatch(setJob(''))
+        inputRef.current.focus()
     }
+
     return (
         <>
             <h1>useReducer 2</h1>
             <input
+
                 value={job}
                 onChange={e => dispatch(setJob(e.target.value))}
                 placeholder="enter jobs..."
-                type="text" />
+                type="text"
+                ref={inputRef} />
             <button onClick={handleSubmit}>Add</button>
             <ul>
                 {jobs.map((job, index) => (
-                    <>
-                        <li key={index}>{job}
-                            <button onClick={() => dispatch(deleteJob(index))}>&times;</button>
-                        </li>
-                    </>
+
+                    <li key={index}>{job}
+                        <button onClick={() => dispatch(deleteJob(index))}>&times;</button>
+                    </li>
+
                 ))}
             </ul>
         </>
