@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/9676c9e3c1.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: aquamarine;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        .app {
+            background-color: white !important;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .nav-list {
+            height: 0;
+            overflow: hidden;
+            transition: all 0.3s linear;
+            font-size: 25px !important;
+            display: flex;
+            align-items: center;
+        }
+
+        /* .nav-list ul {
+            display: flex;
+            flex-direction: column;
+            margin: 0 0;
+        } */
+
+
+        div.nav-list ul li {
+            margin: 5px 10px;
+
+        }
+
+        .nav-icons {
+            display: none;
+        }
+
+        div.nav-icons ul li {
+            margin: 0 5px;
+        }
+
+        div.nav-icons ul :hover,
+        div.nav-list ul :hover {
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        ul {
+            padding-left: 0 !important;
+        }
+
+        div.nav-icons div {
+            position: relative;
+        }
+
+        .nav-logo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .btn-toggle {
+            font-size: 30px;
+        }
+
+        .btn-toggle-hover :hover {
+            transform: rotate(90deg);
+        }
+
+        /* show list link class */
+        .show-links {
+            height: 160px;
+        }
+
+
+
+        @media screen and (min-width: 800px) {
+
+            nav,
+            div.nav-list ul,
+            div.nav-icons ul {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .nav-icons {
+                display: block;
+            }
+
+            .nav-list {
+                height: auto !important;
+            }
+
+            .btn-toggle {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="app">
+        <nav>
+            <div class="nav-logo">
+                <img src="https://vanilla-js-basic-project-4-navbar.netlify.app/logo.svg" alt="logo">
+                <div class="btn-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Projects</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="nav-icons">
+
+                <ul class="">
+                    <li><i class="fa fa-facebook-official" aria-hidden="true"></i></li>
+                    <li><i class="fa-brands fa-twitter"></i></li>
+                    <li><i class="fa-brands fa-behance"></i></li>
+                    <li><i class="fa-brands fa-linkedin"></i></li>
+                    <li><i class="fa-brands fa-sketch"></i></li>
+
+                </ul>
+
+
+
+            </div>
+
+        </nav>
+    </div>
+    <script src="./navbar.js"></script>
+</body>
+
+</html>
