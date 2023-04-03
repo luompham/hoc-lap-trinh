@@ -2,7 +2,8 @@
 const toggleBtn = document.querySelector('.toggle-button')
 let stateBtn = true;
 const video = document.querySelector('video')
-console.log(video)
+const img = document.querySelector('img')
+console.log(img)
 
 toggleBtn.addEventListener('click', () => {
     stateBtn = !stateBtn;
@@ -12,9 +13,9 @@ toggleBtn.addEventListener('click', () => {
     } else {
         video.pause();
         console.log('pause')
-
     }
-
-
 })
 
+window.addEventListener('load', () => {
+    img.classList.add('hide-preload-img')
+})
