@@ -14,45 +14,129 @@
             padding: 0;
         }
 
+
         .container {
+            position: relative;
+            display: grid;
+            height: 100vh;
+            place-items: center;
+            /* background-color: aquamarine; */
+        }
+
+        .container::after {
+            content: '';
+            height: 100vh;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2;
             position: relative;
 
         }
 
-        video {
-            width: 900px;
-            height: 500px;
-            margin: 0 auto !important;
+        .loading-page::before {
+            content: '';
+            height: 2px;
+            width: 100%;
+            background-color: red;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            position: fixed;
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+            animation: loading-page ease-out 2s;
         }
 
-        .toggle-button {
-            height: 50px;
-            position: absolute;
-            left: 30px;
-            bottom: 30px;
-            background-color: white;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        @keyframes loading-page {
+            from {
+                width: 0%;
+            }
+
+            to {
+                width: 100%;
+            }
         }
+
+        .preload-img {
+            position: absolute;
+            z-index: 999;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            display: grid;
+            place-items: center;
+        }
+
 
         .hide-preload-img {
-            display: none;
+            position: absolute;
+            z-index: -999;
+        }
+
+        video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .switch-button,
+        h1 {
+            position: absolute;
+            z-index: 3;
+        }
+
+        .switch-button {
+            height: 30px;
+            width: 120px;
+            left: 50px;
+            bottom: 30px;
+            background-color: aqua;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+        }
+
+
+        .switch-button .switch {
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            background-color: blue;
+            top: 0;
+            left: 0;
+        }
+
+        .slide .switch {
+            left: 50%;
         }
     </style>
 </head>
 
 <body>
+
+
     <div class="container">
-        <img src="https://vannilla-js-basic-project-9-video-preloader.netlify.app/preloader.gif"
-             alt="preload">
-        <video autoplay
+        <div class="preload-img loading-page">
+            <img src="https://vannilla-js-basic-project-9-video-preloader.netlify.app/preloader.gif"
+                 alt="preload">
+        </div>
+        <video class="video-container"
+               autoplay
                muted
                loop
                src="https://vannilla-js-basic-project-9-video-preloader.netlify.app/video.mp4">
 
         </video>
-        <button class="toggle-button">Play/Pause</button>
+        <h1>Video Project</h1>
+        <div class='switch-button'>
+            <span>Play</span>
+            <span>Pause</span>
+            <span class="switch"></span>
+        </div>
     </div>
 
     <script src="./video.js"></script>

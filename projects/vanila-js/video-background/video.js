@@ -1,21 +1,32 @@
-
-const toggleBtn = document.querySelector('.toggle-button')
-let stateBtn = true;
 const video = document.querySelector('video')
-const img = document.querySelector('img')
-console.log(img)
 
-toggleBtn.addEventListener('click', () => {
-    stateBtn = !stateBtn;
-    if (stateBtn) {
-        console.log('play')
-        video.play();
+const btn = document.querySelector('.switch-button')
+
+const img = document.querySelector('.preload-img')
+
+console.log(img);
+
+btn.addEventListener('click', () => {
+    if (!btn.classList.contains('slide')) {
+        btn.classList.add('slide')
+        video.pause()
     } else {
-        video.pause();
-        console.log('pause')
+        btn.classList.remove('slide')
+        video.play()
     }
 })
 
-window.addEventListener('load', () => {
+
+//fake slow network
+setTimeout(() => {
     img.classList.add('hide-preload-img')
-})
+    // img.classList.add('loading-page')
+
+}, 1000)
+
+//sau khi tải toàn bộ dữ liệu trang (gồm css file, images, video), thì ẩn preload image.
+// window.addEventListener('load', () => {
+//     img.classList.add('hide-preload-img')
+// })
+
+
