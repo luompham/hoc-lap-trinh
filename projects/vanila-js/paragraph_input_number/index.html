@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paragraphs Input Number</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            margin: 50px auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div.lorem-content {
+            width: 700px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+        <h1>TIRED OF BORING LOREM IPSUM?</h1>
+        <form class="lorem-form">
+            <label for="amount">Paragraphs:</label>
+            <input type="number" name="amount" id="amount">
+            <button type="submit" class="btn">GENERATE</button>
+        </form>
+        <div class="lorem-content">
+
+        </div>
+    </section>
+
+    <script src="./paragraphs.js"></script>
+</body>
+
+</html>
