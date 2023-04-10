@@ -25,13 +25,24 @@
             text-align: center !important;
         }
 
+        div.grocery-container {
+            visibility: hidden;
+        }
+
+        .show-container {
+            visibility: visible !important;
+        }
+
         article.grocery-item {
             display: flex;
             /* justify-content: center; */
             align-items: center;
             gap: 10px;
-            /* visibility: hidden; */
+            text-transform: capitalize;
+
         }
+
+
 
         .alert {
             padding: 10px;
@@ -54,7 +65,7 @@
     <section class="section-center">
         <!-- form -->
         <form class="grocery-form">
-            <p class="alert">Empty value</p>
+            <p class="alert"></p>
             <h1>Grocery Bud</h1>
             <div class="form-control">
                 <input type="text" id="grocery" placeholder="e.g. eggs">
@@ -63,19 +74,7 @@
         </form>
         <div class="grocery-container">
             <div class="grocery-list">
-                <article class="grocery-item">
-                    <p class="title">item</p>
-                    <div class="btn-container">
 
-                        <button class="edit-btn">
-                            <i class='fas fa-edit'></i>
-
-                        </button>
-                        <button class="delete-btn">
-                            <i class="fa-solid fa-trash"></i>
-                        </button>
-                    </div>
-                </article>
             </div>
             <button class="clear-btn">Clear items</button>
         </div>
